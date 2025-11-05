@@ -120,3 +120,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+ @keyframes float {
+          0%, 100% { transform: translate(0, 0) rotate(0deg); }
+          25% { transform: translate(60px, -60px) rotate(90deg); }
+          50% { transform: translate(-30px, -120px) rotate(180deg); }
+          75% { transform: translate(-90px, -60px) rotate(270deg); }
+        }
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-float {
+          animation: float var(--duration, 20s) infinite ease-in-out;
+          animation-delay: var(--delay, 0s);
+        }
+        .animate-fade-in-up {
+          animation: fadeInUp 0.6s ease-out forwards;
+        }
